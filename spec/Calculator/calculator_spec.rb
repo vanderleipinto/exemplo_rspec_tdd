@@ -1,5 +1,5 @@
 require "calculator"
-describe Calculator do
+describe Calculator, "uma calculadora que calcula" do
   context "#sum" do
     it 'use sum method' do
       calc = Calculator.new
