@@ -13,17 +13,19 @@ describe 'Classes' do
     expect('ruby').to respond_to(:count)
   end
 
-  xit 'be_kind_of' do
-    expect(10).to be_(Integer)
+  it 'be_kind_of' do
+    expect(10).to be_kind_of(Integer)
   end
-
-  xit 'be_a' do
+  
+  #be_a, be_an, be_kind_of are all the sema
+  it 'be_an' do
     expect(10).to be_a(Integer)
   end
 
-  xit 'be_a' do
+  it 'be_a' do
     expect(10).to be_a(Integer)
   end
+
 
   
 
