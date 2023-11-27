@@ -3,6 +3,6 @@ describe 'Predicados' do
     expect(1).to be_odd
   end
   it 'even' do
-    expect(1).to be_even
+    expect(2).to be_even
   end
 end

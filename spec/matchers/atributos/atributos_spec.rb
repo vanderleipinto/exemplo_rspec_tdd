@@ -1,6 +1,16 @@
 require 'pessoa'
 
+
+
 describe 'Atributos' do
+
+  before(:each) do
+    puts "______ Antes de cada teste dentro do arquivo de teste_____"
+  end
+  after(:each) do
+    puts "______ Depois de cada teste dentro do arquivo de teste_____"
+  end
+
   it 'have_attributes' do
     pessoa = Pessoa.new
     pessoa.nome = "Jackson"

@@ -13,7 +13,33 @@
 # it.
 #
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+
+require_relative '../helpers/helper'
 RSpec.configure do |config|
+
+  #Helper Methods de módulo para o composition/conpositions_rspec.rb
+  config.include Helper
+
+  # Configuração de suite para rodar antes dos testes.
+  config.before(:suite) do
+    puts ">>>>>>>ANTES de TODA a suíte de testes"
+  end
+
+   # Configuração de suite para rodar depois dos testes.
+   config.after(:suite) do
+    puts ">>>>>>>Depois de TODA a suíte de testes"
+  end
+
+  # Configuração de suite para rodar antes dos testes.
+  config.before(:context) do
+    puts ">>>>>>>ANTES de TODOS os testes de contexto"
+  end
+
+   # Configuração de suite para rodar depois dos testes.
+   config.after(:all) do
+    puts ">>>>>>>Depois de TODOS os testes de contexto"
+  end
+
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.

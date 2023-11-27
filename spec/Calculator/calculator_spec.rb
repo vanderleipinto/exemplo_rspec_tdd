@@ -18,10 +18,11 @@ describe Calculator, "uma calculadora que calcula" do
       expect {subject.div(3,0)}.to raise_error(/divided/)
     end
 
-    #
+    #OBS: Em todos os casos, o teste é feito dentro de um bloco {} para ele interpretar o código e retornar o erro
+    #caso fosse sem bloco, o erro aconteceria e pararia a compilação do código sem o teste.
+    # entre blocos: => expect {subject.div(3,0)}
+    # sem blocos:  => expect(subject.div(3,0)).to eq (12) 
   end
-
-
   
   context "#sum" do
     it 'use sum method' do
