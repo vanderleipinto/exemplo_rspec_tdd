@@ -4,11 +4,17 @@ require 'pessoa'
 
 describe 'Atributos' do
 
-  before(:each) do
-    puts "______ Antes de cada teste dentro do arquivo de teste_____"
-  end
-  after(:each) do
-    puts "______ Depois de cada teste dentro do arquivo de teste_____"
+  # before(:each) do
+  #   puts "______ Antes de cada teste dentro do arquivo de teste_____"
+  # end
+  # after(:each) do
+  #   puts "______ Depois de cada teste dentro do arquivo de teste_____"
+  # end
+
+  around(:each) do |teste|
+    puts ">>>Antes"
+    teste.run  #roda o teste.
+    puts ">>>Depois"    
   end
 
   it 'have_attributes' do
