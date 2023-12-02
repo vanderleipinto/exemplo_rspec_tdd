@@ -1,26 +1,14 @@
-require 'pessoa'
+$counter = 0
 
-
-
-describe 'Atributos' do
-
-  before(:each) do
-    @pessoa = Pessoa.new
-  end
-  
-  
-  it 'have_attributes' do
-  
-    @pessoa.nome = "Jackson"
-    @pessoa.idade = 20
-    expect(@pessoa).to have_attributes(nome: "Jackson", idade: 20 )
-  end
-
-  
-  it 'have_specific_attributes' do
-  
-    @pessoa.nome = "Jose"
-    @pessoa.idade = 25
-    expect(@pessoa).to have_attributes(:nome => starting_with("J"), idade: (a_value>20))
-  end
+describe "let" do
+   let(:count) {counter += 1}
+   it "memoriza o valor" do
+      expect($counter).to eq(1) #chama a primeira vez e conta +1
+      expect($counter).to eq(1) #Já chamou uma vez, o resultado fica em cache. mantem 1
+   end
+   
+   it "não é cacheado entre os testes" do
+      expect($counter).to eq(1) #como é outro teste, ele vai chamar novamente e soma +1
+   end
 end
+
