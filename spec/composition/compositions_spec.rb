@@ -10,6 +10,9 @@ describe "Ruby on Rails" do
 
   it {is_expected.to starting_with('Ruby').or end_with('Rdial')}
   it {expect(fruta).to eq('banana').or eq('abacate').or eq('uva')}
+  it {expect(fruta).to eq('banana').or eq('abacate').or eq('uva')}
+  it {expect(fruta).to eq('banana').or eq('abacate').or eq('uva')}
+  it {expect(fruta).to eq('banana').or eq('abacate').or eq('uva')}
 
   
   # def fruta #helper method arbitrário
