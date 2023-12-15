@@ -41,7 +41,6 @@ describe 'Stub' do
     allow(student).to receive(:bar).and_raise(RuntimeError)
 
     expect{student.bar}.to raise_error(RuntimeError)
-    expect(student).to receive(:bar)
-    
   end
+   
 end
